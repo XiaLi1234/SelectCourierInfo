@@ -56,11 +56,8 @@ namespace KdGoldAPI
             string dataSign = encrypt(requestData, AppKey, "UTF-8");
             param.Add("DataSign", HttpUtility.UrlEncode(dataSign, Encoding.UTF8));
             param.Add("DataType", "2");
-
             string result = sendPost(ReqURL, param);
-
             //根据公司业务处理返回的信息......
-
             return result;
         }
 
@@ -90,7 +87,6 @@ namespace KdGoldAPI
             byte[] byteData = Encoding.GetEncoding("UTF-8").GetBytes(postData.ToString());
             try
             {
-
                 HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
                 request.ContentType = "application/x-www-form-urlencoded";
                 request.Referer = url;
