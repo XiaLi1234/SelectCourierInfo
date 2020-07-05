@@ -11,7 +11,7 @@ namespace KdNiaoDemo
     {
         static void Main(string[] args)
         {
-            //无限循环查询订单物流轨迹。
+            //无限循环查询订单物流轨迹
             while (true)
             {
                 Seacher();
